@@ -1,0 +1,13 @@
+<!DOCTYPE HTML>
+<html>
+    <head>
+        <link rel="stylesheet" type="text/css" href="/static/style.css">
+    </head>
+    <body>
+        <img src="static/logo.png" id="logo"/><br/>
+            <h1 id="VoteHeader1">KAPTANLIK SEÇİM SONUÇLARI</h1>
+            {%for x in range(0,ul)%}
+                <h4 class="results">{{x+1}}. {{candidates[x]}}:{{results[candidates[x]]}}</h4>
+            {%endfor%} 
+    </body>
+</html>

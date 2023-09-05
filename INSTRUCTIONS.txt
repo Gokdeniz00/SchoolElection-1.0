@@ -1,0 +1,12 @@
+
+Kurulum Adımları:
+    Programın çalışacağı bilgisayarda:
+        1. candidate_entry.py dosyasını çalıştırıp Kaptan Adaylarının isimlerini (mümkünse sadece önadları) çıkmak için "/E" komutunu giriniz.
+        2. windows search bardan "Komut istemcisi", "Command Prompt" veya "CMD" programını çalıştırınız.
+        3. komut istemcisinde ipconfig komutunu girip networkdeki local IP adresinizi "IPv4 Address"  seçeneğinin karşısından öğreniniz(X.X.X.X Formatında olmalıdır), bu address daha sonra programa girilip diğer client bilgisayarlarda kullanılacakdır.
+        4.Son olarak server.py programını çalıştırıp öğrenci başına kaç adaya oy verileceğini ve önceki adımda elde ettiğimiz IPv4 adresini giriniz.
+    Client bilgisayarlarda:
+        5. Önceki kurulumu tamamladıkdan sonra browseri açıp browserdeki address bara X.X.X.X:81 şeklinde sunucunun çalıştığı bilgisayarın ip addresini ve portu giriniz.
+NOT:
+    1. 4. adımda programı çalıştırdığınızda firewallın çıkaracağı network access pop-upını onaylayınız
+    2. Seçim sonuçlarını X.X.X.X:81/results dan öğrenebilirsiniz.

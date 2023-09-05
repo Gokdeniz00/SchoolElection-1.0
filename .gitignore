@@ -1,0 +1,10 @@
+*.zip
+*.un~
+*.swp
+*.py~
+*.swo
+*.json
+*.exe
+*.spec
+/build
+/dist

@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <link rel="stylesheet" type="text/css" href="/static/style.css">
+        <title>VOTING FORM</title>
+    </head>
+    <body>
+        <header>
+            <h1 id="VoteHeader1">
+                <span class="oddh">T</span><span class="evenh">M</span><span class="oddh">K</span><br/><span id="Header2">Kaptanlık Seçim Formu</span>
+            </h1> 
+            <h4>
+                    Uyarılar:<br/>
+                        +Lütfen bütün alanları verilen aday isimleriyle doldurunuz.<br/>
+                        +Lütfen bir aday ismini birden fazla boşluğa girmeyiniz.<br/>
+                    <b>EĞER BELİRTİLEN UYARILARA UYULMAZSA OY GEÇERSİZ KABUL EDİLECEKTİR</b>
+            </h4>  
+        </header>   
+        <form method="POST">
+            <table id="votebody">
+                {%for x in range(0,no_of_votes)%}
+                <tr>
+                    <th><span id="oy">{{x+1}}. Oyunuzu giriniz:</span><br></th>
+                    <td><input name="CandidateName{{x+1}}" type="text" placeholder="Kaptan adayının ismi"><t/d></tr>
+                </tr>
+                {%endfor%}             
+            </table>
+            <div id="SubmitDIV">
+                <input id="Submit"name="Submit" type="Submit">
+            </div>
+        </form>
+    </body>
+</html>
