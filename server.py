@@ -47,7 +47,9 @@ def results():
         ORDER BY VOTES DESC;
 ''')
     no_of_candidates=input("Kaç kaptan seçileceğini giriniz:")
-    return render_template("results.html",results=resultsdict,ul=no_of_candidates,candidates=sortedNames)
+    results=cursor.fetchall()
+    succesors=[x for x in results[:no_of_candidates]]
+    return render_template("results.html",results=succesors)
 
         
 if __name__ =="__main__":

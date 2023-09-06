@@ -5,9 +5,13 @@
     </head>
     <body>
         <img src="static/logo.png" id="logo"/><br/>
-            <h1 id="VoteHeader1">KAPTANLIK SEÇİM SONUÇLARI</h1>
-            {%for x in range(0,ul)%}
-                <h4 class="results">{{x+1}}. {{candidates[x]}}:{{results[candidates[x]]}}</h4>
-            {%endfor%} 
+        <h1 id="VoteHeader1">KAPTANLIK SEÇİM SONUÇLARI</h1>
+        <h4 class="results"></h4>
+            <li>
+            {%for x in results%}
+               <ol>{{x[0]}} from x[1] have {{x[2]}} votes</ol>
+            {%endfor%}
+            </li>
+        </h4> 
     </body>
 </html>
