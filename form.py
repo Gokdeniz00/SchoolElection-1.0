@@ -19,7 +19,8 @@ register=tk.Frame(gui)
 register.pack()
 
 def registery():
-    cursor.execute(f"INSERT INTO CANDIDATE(NAME,GROUP,VOTES) \ VALUES({name.get},{group.get},0)")
+    cursor.execute(f"INSERT INTO CANDIDATE(NAME,GROUPNAME,VOTES)  VALUES('{str(name.get())}','{str(group.get())}',0)")
+    database.commit()
     name.set("")
     group.set("")
 
