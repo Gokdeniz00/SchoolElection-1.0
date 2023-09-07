@@ -53,9 +53,8 @@ def results():
         SELECT * FROM CANDIDATE
         ORDER BY VOTES DESC;
 ''')
-    no_of_candidates=input("Kaç kaptan seçileceğini giriniz:")
     results=cursor.fetchall()
-    succesors=[x for x in results[:int(no_of_candidates)]]
+    succesors=[x for x in results]
     return render_template("results.html",results=succesors)
 
         
